@@ -61,6 +61,20 @@ weather_saver/
 
 The screensaver product is `WeatherSaver.saver`. Install it by copying to `~/Library/Screen Savers/` or `/Library/Screen Savers/`, then enable it in System Settings > Desktop & Screen Saver.
 
+### Install script
+
+A convenience script builds and installs the screensaver in one step:
+
+```bash
+./scripts/install_screensaver.sh
+```
+
+Options:
+- `./scripts/install_screensaver.sh --build-only`   Build only, do not install
+- `./scripts/install_screensaver.sh --install-only` Install from an existing build
+
+The script builds the `WeatherSaver` scheme into a local `.DerivedData/` directory, locates the `WeatherSaver.saver` bundle, and copies it to `~/Library/Screen Savers/`. After installation, open System Settings > Desktop & Screen Saver to enable WeatherSaver.
+
 ## Configuration
 
 The configuration sheet is accessible:
