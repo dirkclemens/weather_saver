@@ -2,11 +2,11 @@
 
 ![WeatherSaver screenshot](screenshot.jpg)
 
-A macOS screensaver that displays live weather conditions with animated clouds, rain, snow, fog, and thunderstorm effects. Powered by weather data from the Deutscher Wetterdienst (DWD) via the BrightSky API.
+A macOS screensaver that displays live weather conditions with animated clouds, rain, snow, fog, and thunderstorm effects. Powered by weather data from the Deutscher Wetterdienst (DWD) via the [BrightSky API](https://brightsky.dev/).
 
 ## Features
 
-- **Live weather**: Fetches current conditions and forecast from BrightSky API (DWD data)
+- **Live weather**: Fetches current conditions and forecast from [BrightSky API](https://brightsky.dev/) (DWD data)
 - **Animated weather effects**: Clouds, rain, snow, thunderstorms with lightning, and fog
 - **Configuration panel**: Set location (latitude/longitude), location name, units (metric/imperial), animation speed, cloud opacity, update interval, and display toggles
 - **Location services**: "Use Current Location" button fetches your GPS position via Core Location and reverse-geocodes it to a place name
@@ -18,7 +18,7 @@ A macOS screensaver that displays live weather conditions with animated clouds, 
 ```
 weather_saver/
 ├── WeatherAPI/                 # Weather data fetching layer
-│   ├── BrightSkyClient.swift   # BrightSky API client (HTTP + JSON decoding)
+│   ├── BrightSkyClient.swift   # [BrightSky API](https://brightsky.dev/) client (HTTP + JSON decoding)
 │   ├── LocationManager.swift   # Core Location wrapper (async/await)
 │   └── WeatherTypes.swift      # Shared WeatherData model + WeatherProvider protocol
 ├── WeatherSaver/               # The screensaver bundle target
@@ -49,7 +49,7 @@ weather_saver/
 
 - macOS 14.0 or later
 - Xcode 15 or later
-- Internet connection (for BrightSky API)
+- Internet connection (for [BrightSky API](https://brightsky.dev/))
 - Location services permission (optional, for "Use Current Location")
 
 ## Building
@@ -91,7 +91,7 @@ For testing or visual preview without calling the API, enable **Simulation Mode*
 
 The screensaver requests:
 - **Location Services** (`NSLocationWhenInUseUsageDescription`) — for "Use Current Location"
-- **Network client** (`com.apple.security.network.client`) — sandbox entitlement for BrightSky API HTTPS requests
+- **Network client** (`com.apple.security.network.client`) — sandbox entitlement for [BrightSky API](https://brightsky.dev/) HTTPS requests
 
 Both entitlements are configured in `WeatherSaver/Support/WeatherSaver.entitlements`.
 
