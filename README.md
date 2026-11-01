@@ -1,5 +1,7 @@
 # WeatherSaver
 
+![WeatherSaver screenshot](screenshot.jpg)
+
 A macOS screensaver that displays live weather conditions with animated clouds, rain, snow, fog, and thunderstorm effects. Powered by weather data from the Deutscher Wetterdienst (DWD) via the BrightSky API.
 
 ## Features
@@ -95,4 +97,9 @@ Both entitlements are configured in `WeatherSaver/Support/WeatherSaver.entitleme
 
 ## License
 
-Copyright © 2026. All rights reserved.
+This project is licensed under the **PolyForm Noncommercial License 1.0.0**. See the [LICENSE](LICENSE) file for full terms.
+
+Key points:
+- Noncommercial use is permitted (personal, hobby, research, education, charity, etc.)
+- Commercial use requires a separate license from the copyright holder
+- Copyright © 2026 Dirk Clemens ([dirkclemens](https://github.com/dirkclemens))
