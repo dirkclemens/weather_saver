@@ -102,4 +102,3 @@ This project is licensed under the **PolyForm Noncommercial License 1.0.0**. See
 Key points:
 - Noncommercial use is permitted (personal, hobby, research, education, charity, etc.)
 - Commercial use requires a separate license from the copyright holder
-- Copyright © 2026 Dirk Clemens ([dirkclemens](https://github.com/dirkclemens))
