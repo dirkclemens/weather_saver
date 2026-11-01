@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B026EBBBBFB410BA59B25BB5DC80D7D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E96AEFED1D4955B10B26B0598366EA /* CoreLocation.framework */; };
+		43FB140A307CF82F00682CF6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6E96AEFED1D4955B10B26B0598366EA /* CoreLocation.framework */; };
+		43FB1436307FD53B00682CF6 /* WeatherPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFG001REF /* WeatherPreferences.swift */; };
+		43FB1437307FD53B00682CF6 /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFG002REF /* ConfigurationView.swift */; };
+		43FB148C307FEA7400682CF6 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 43FB148B307FEA7400682CF6 /* thumbnail.png */; };
+		43FB148D307FEA7400682CF6 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 43FB148B307FEA7400682CF6 /* thumbnail.png */; };
+		B1 /* WeatherSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10 /* WeatherSaverView.swift */; };
+		B2 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F11 /* ScreenSaver.framework */; };
+		B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12 /* AppDelegate.swift */; };
+		B4 /* PreviewWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13 /* PreviewWindowController.swift */; };
+		B5 /* WeatherSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10 /* WeatherSaverView.swift */; };
+		CFG001 /* WeatherPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFG001REF /* WeatherPreferences.swift */; };
+		CFG002 /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFG002REF /* ConfigurationView.swift */; };
+		MAIN001 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = MAIN001REF /* main.swift */; };
+		PREVIEW001 /* preview.png in Resources */ = {isa = PBXBuildFile; fileRef = PREVIEW001REF /* preview.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		43FB148B307FEA7400682CF6 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		CFG001REF /* WeatherPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherPreferences.swift; sourceTree = "<group>"; };
+		CFG002REF /* ConfigurationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationView.swift; sourceTree = "<group>"; };
+		D6E96AEFED1D4955B10B26B0598366EA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F10 /* WeatherSaverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherSaverView.swift; sourceTree = "<group>"; };
+		F11 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		F12 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F13 /* PreviewWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewWindowController.swift; sourceTree = "<group>"; };
+		F14 /* WeatherSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F16 /* Preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Preview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F17 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		MAIN001REF /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		PREVIEW001REF /* preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		43FB1441307FD75300682CF6 /* Exceptions for "WeatherAPI" folder in "WeatherSaver" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BrightSkyClient.swift,
+				LocationManager.swift,
+				WeatherTypes.swift,
+			);
+			target = T30 /* WeatherSaver */;
+		};
+		43FB1442307FD75300682CF6 /* Exceptions for "WeatherAPI" folder in "Preview" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BrightSkyClient.swift,
+				LocationManager.swift,
+				WeatherTypes.swift,
+			);
+			target = T34 /* Preview */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		43FB13EB307CEF5D00682CF6 /* WeatherAPI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				43FB1441307FD75300682CF6 /* Exceptions for "WeatherAPI" folder in "WeatherSaver" target */,
+				43FB1442307FD75300682CF6 /* Exceptions for "WeatherAPI" folder in "Preview" target */,
+			);
+			path = WeatherAPI;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FR20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				B2 /* ScreenSaver.framework in Frameworks */,
+				0B026EBBBBFB410BA59B25BB5DC80D7D /* CoreLocation.framework in Frameworks */,
+			);
+		};
+		FR21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+				43FB140A307CF82F00682CF6 /* CoreLocation.framework in Frameworks */,
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G0 = {
+			isa = PBXGroup;
+			children = (
+				43FB13EB307CEF5D00682CF6 /* WeatherAPI */,
+				G1 /* WeatherSaver */,
+				G2 /* Preview */,
+				G3 /* Products */,
+				G4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		G1 /* WeatherSaver */ = {
+			isa = PBXGroup;
+			children = (
+				G5 /* Sources */,
+				G6 /* Support */,
+			);
+			path = WeatherSaver;
+			sourceTree = "<group>";
+		};
+		G2 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				G7 /* Sources */,
+				G8 /* Support */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
+		G3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F14 /* WeatherSaver.saver */,
+				F16 /* Preview.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F11 /* ScreenSaver.framework */,
+				D6E96AEFED1D4955B10B26B0598366EA /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		G5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CFG001REF /* WeatherPreferences.swift */,
+				CFG002REF /* ConfigurationView.swift */,
+				F10 /* WeatherSaverView.swift */,
+				43FB148B307FEA7400682CF6 /* thumbnail.png */,
+				PREVIEW001REF /* preview.png */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		G6 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F15 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		G7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F12 /* AppDelegate.swift */,
+				F13 /* PreviewWindowController.swift */,
+				MAIN001REF /* main.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		G8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F17 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T30 /* WeatherSaver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C31 /* Build configuration list for PBXNativeTarget "WeatherSaver" */;
+			buildPhases = (
+				S32 /* Sources */,
+				FR20 /* Frameworks */,
+				R33 /* Resources */,
+			);
+			buildRules = (
+			);
+			name = WeatherSaver;
+			productName = WeatherSaver;
+			productReference = F14 /* WeatherSaver.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+		T34 /* Preview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C35 /* Build configuration list for PBXNativeTarget "Preview" */;
+			buildPhases = (
+				S36 /* Sources */,
+				FR21 /* Frameworks */,
+				R37 /* Resources */,
+			);
+			buildRules = (
+			);
+			name = Preview;
+			productName = Preview;
+			productReference = F16 /* Preview.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 2710;
+				ORGANIZATIONNAME = de.adcore;
+				TargetAttributes = {
+					T30 = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+						ProvisioningStyle = Automatic;
+					};
+					T34 = {
+						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = C41 /* Build configuration list for PBXProject "WeatherSaver" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G0;
+			preferredProjectObjectVersion = 110;
+			productRefGroup = G3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T30 /* WeatherSaver */,
+				T34 /* Preview */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		R33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				43FB148C307FEA7400682CF6 /* thumbnail.png in Resources */,
+				PREVIEW001 /* preview.png in Resources */,
+			);
+		};
+		R37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				43FB148D307FEA7400682CF6 /* thumbnail.png in Resources */,
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		S32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				CFG001 /* WeatherPreferences.swift in Sources */,
+				CFG002 /* ConfigurationView.swift in Sources */,
+				B1 /* WeatherSaverView.swift in Sources */,
+			);
+		};
+		S36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				43FB1436307FD53B00682CF6 /* WeatherPreferences.swift in Sources */,
+				43FB1437307FD53B00682CF6 /* ConfigurationView.swift in Sources */,
+				B3 /* AppDelegate.swift in Sources */,
+				B4 /* PreviewWindowController.swift in Sources */,
+				B5 /* WeatherSaverView.swift in Sources */,
+				MAIN001 /* main.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C42 /* Debug configuration for PBXProject "WeatherSaver" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BXZ479CGUZ;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C43 /* Release configuration for PBXProject "WeatherSaver" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BXZ479CGUZ;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C44 /* Debug configuration for PBXNativeTarget "WeatherSaver" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WeatherSaver/Support/WeatherSaver.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/WeatherSaver/Support/Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.adcore.WeatherSaver;
+				PRODUCT_MODULE_NAME = WeatherSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		C45 /* Release configuration for PBXNativeTarget "WeatherSaver" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = WeatherSaver/Support/WeatherSaver.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/WeatherSaver/Support/Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.adcore.WeatherSaver;
+				PRODUCT_MODULE_NAME = WeatherSaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+		C46 /* Debug configuration for PBXNativeTarget "Preview" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Preview/Support/Preview.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Preview/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = de.adcore.WeatherSaver.preview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C47 /* Release configuration for PBXNativeTarget "Preview" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Preview/Support/Preview.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = YES;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Preview/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
+				PRODUCT_BUNDLE_IDENTIFIER = de.adcore.WeatherSaver.preview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C31 /* Build configuration list for PBXNativeTarget "WeatherSaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C44 /* Debug configuration for PBXNativeTarget "WeatherSaver" */,
+				C45 /* Release configuration for PBXNativeTarget "WeatherSaver" */,
+			);
+			defaultConfigurationName = Debug;
+		};
+		C35 /* Build configuration list for PBXNativeTarget "Preview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C46 /* Debug configuration for PBXNativeTarget "Preview" */,
+				C47 /* Release configuration for PBXNativeTarget "Preview" */,
+			);
+			defaultConfigurationName = Debug;
+		};
+		C41 /* Build configuration list for PBXProject "WeatherSaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42 /* Debug configuration for PBXProject "WeatherSaver" */,
+				C43 /* Release configuration for PBXProject "WeatherSaver" */,
+			);
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P40 /* Project object */;
+}
