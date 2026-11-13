@@ -139,6 +139,7 @@ public struct ConfigurationView: View {
                     Toggle("Show Details (Wind, Humidity, Pressure)", isOn: $preferences.showDetails)
                     Toggle("Show Location Name", isOn: $preferences.showLocationName)
                     Toggle("Use Metric Units", isOn: $preferences.useMetricUnits)
+                    Toggle("Glossy Card (Liquid Glass)", isOn: $preferences.glossyCard)
                 }
                 
                 Section("Animation") {
@@ -184,11 +185,17 @@ public struct ConfigurationView: View {
 
                     Picker("Condition:", selection: $preferences.simulatedCondition) {
                         Text("Sunny").tag("sunny")
+                        Text("Partly Cloudy").tag("partlycloudy")
                         Text("Cloudy").tag("cloudy")
-                        Text("Rain").tag("rain")
-                        Text("Snow").tag("snow")
-                        Text("Thunderstorm").tag("thunderstorm")
+                        Text("Overcast").tag("overcast")
                         Text("Fog").tag("fog")
+                        Text("Drizzle").tag("drizzle")
+                        Text("Rain").tag("rain")
+                        Text("Heavy Rain").tag("heavyrain")
+                        Text("Sleet").tag("sleet")
+                        Text("Snow").tag("snow")
+                        Text("Heavy Snow").tag("heavysnow")
+                        Text("Thunderstorm").tag("thunderstorm")
                     }
                     .disabled(!preferences.simulateWeather)
                     .pickerStyle(.menu)

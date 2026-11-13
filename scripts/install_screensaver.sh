@@ -18,7 +18,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 PROJECT_NAME="WeatherSaver"
 SCHEME_NAME="WeatherSaver"
-CONFIGURATION="Debug"
+CONFIGURATION="Release" # optimised build – the procedural textures are much faster
 
 # -----------------------------------------------------------------------------
 # Parse arguments

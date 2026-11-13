@@ -2,12 +2,18 @@
 
 ![WeatherSaver screenshot](screenshot.jpg)
 
-A macOS screensaver that displays live weather conditions with animated clouds, rain, snow, fog, and thunderstorm effects. Powered by weather data from the Deutscher Wetterdienst (DWD) via the [BrightSky API](https://brightsky.dev/).
+A macOS screensaver that displays live weather conditions over a realistic, animated sky: procedurally generated clouds, rain, snow, fog and thunderstorms that follow the real time of day. Powered by weather data from the Deutscher Wetterdienst (DWD) via the [BrightSky API](https://brightsky.dev/).
 
 ## Features
 
 - **Live weather**: Fetches current conditions and forecast from [BrightSky API](https://brightsky.dev/) (DWD data)
-- **Animated weather effects**: Clouds, rain, snow, thunderstorms with lightning, and fog
+- **Realistic animated sky** (GPU-composited with Core Animation):
+  - Procedural cumulus clouds built from lit "puffs", cloud decks, torn low clouds (fractus) and high cirrus — all drifting with the real wind direction and speed, with depth parallax
+  - Rain and snow as particle systems with three depth layers, wind slant, splashes and out-of-focus foreground flakes
+  - Drifting, breathing fog banks over a ground haze
+  - Thunderstorms with irregular cloud flashes and branching lightning bolts
+  - Day / twilight / night sky computed from the sun's elevation at your location, with stars and the current moon phase at night
+- **Info card**: Frosted glass card with clock, date, SF Symbols, today's high/low, details and the next six hours; it drifts very slowly to avoid burn-in. Optionally glossy, using Liquid Glass on macOS 26+
 - **Configuration panel**: Set location (latitude/longitude), location name, units (metric/imperial), animation speed, cloud opacity, update interval, and display toggles
 - **Location services**: "Use Current Location" button fetches your GPS position via Core Location and reverse-geocodes it to a place name
 - **Simulation mode**: Fake weather conditions (Sunny, Cloudy, Rain, Snow, Thunderstorm, Fog) for testing without API calls
@@ -25,7 +31,10 @@ weather_saver/
 │   ├── Sources/
 │   │   ├── ConfigurationView.swift   # SwiftUI configuration sheet
 │   │   ├── WeatherPreferences.swift  # UserDefaults-backed settings (ObservableObject)
-│   │   ├── WeatherSaverView.swift    # ScreenSaverView with Core Graphics animation
+│   │   ├── WeatherSaverView.swift    # ScreenSaverView: data, scene and card orchestration
+│   │   ├── WeatherScene.swift        # Core Animation sky: procedural textures, particles, lightning
+│   │   ├── WeatherCardView.swift     # Frosted glass info card
+│   │   ├── WeatherCondition.swift    # Condition mapping, data model, sun/moon astronomy
 │   │   ├── generate_preview.swift    # Preview generation helpers
 │   │   ├── preview.png                 # Screensaver thumbnail
 │   │   └── thumbnail.png               # Alternative thumbnail
@@ -90,16 +99,28 @@ The configuration sheet is accessible:
 | Use Current Location | Fetches GPS position and reverse-geocodes a place name |
 | Show Forecast | Display upcoming forecast entries |
 | Show Details | Display wind, precipitation, humidity, clouds, pressure |
-| Show Location Name | Show the location name at the bottom |
-| Use Metric Units | Use metric units for display values |
+| Show Location Name | Show the location name in the card header |
+| Use Metric Units | °C, km/h, mm, hPa (off: °F, mph, in, inHg) |
+| Glossy Card | Liquid Glass info card (macOS 26+; drawn glass look on older systems) |
 | Animation Speed | Slow / Normal / Fast / Very Fast |
-| Cloud Opacity | Cloud layer transparency |
+| Cloud Opacity | Opacity multiplier for all cloud layers |
 | Update Interval | How often to refresh weather data |
-| Simulation Mode | Override live API with a fake condition (Sunny, Cloudy, Rain, Snow, Thunderstorm, Fog) |
+| Simulation Mode | Override live API with a fake condition (Sunny, Partly Cloudy, Cloudy, Overcast, Fog, Drizzle, Rain, Heavy Rain, Sleet, Snow, Heavy Snow, Thunderstorm) |
 
 ## Simulation Mode
 
 For testing or visual preview without calling the API, enable **Simulation Mode** in the configuration panel and choose a condition. The screensaver will render the matching animation (e.g., falling snow, rain drops, fog bands, lightning flashes) with simulated temperature and conditions instead of live data.
+
+For development, Debug builds of the Preview app also honour these environment variables, which do not touch the saved settings:
+
+```bash
+# Simulate a condition at a given local hour (sun position, day/night)
+WEATHERSAVER_SIMULATE=thunderstorm WEATHERSAVER_HOUR=22 \
+  .DerivedData/Build/Products/Debug/Preview.app/Contents/MacOS/Preview
+
+# Force the glossy card on (1) or off (0)
+WEATHERSAVER_GLOSSY=1 .DerivedData/Build/Products/Debug/Preview.app/Contents/MacOS/Preview
+```
 
 ## Permissions
 

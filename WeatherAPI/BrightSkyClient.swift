@@ -90,7 +90,7 @@ class BrightSkyClient: WeatherProvider {
 
             return WeatherData(
                 timestamp: normalizedDate,
-                probability: min(max((entry.precipitation_probability ?? 0) / 100, 0), 1),
+                probability: entry.precipitation_probability.map { min(max($0 / 100, 0), 1) },
                 amount: max(0, entry.precipitation ?? 0),
                 temperature: entry.temperature,
                 cloud: max(0, entry.cloud_cover ?? 0),
