@@ -6,7 +6,7 @@ protocol WeatherProvider {
 
 struct WeatherData {
     let timestamp: Date
-    let probability: Double
+    let probability: Double?   // 0…1, nil when the source does not provide it
     let amount: Double
     let temperature: Double?
     let cloud: Double

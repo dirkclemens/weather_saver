@@ -22,6 +22,12 @@
 		CFG002 /* ConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFG002REF /* ConfigurationView.swift */; };
 		MAIN001 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = MAIN001REF /* main.swift */; };
 		PREVIEW001 /* preview.png in Resources */ = {isa = PBXBuildFile; fileRef = PREVIEW001REF /* preview.png */; };
+		WSCA /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = WSCREF /* WeatherCondition.swift */; };
+		WSCB /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = WSCREF /* WeatherCondition.swift */; };
+		WSSA /* WeatherScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = WSSREF /* WeatherScene.swift */; };
+		WSSB /* WeatherScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = WSSREF /* WeatherScene.swift */; };
+		WSKA /* WeatherCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = WSKREF /* WeatherCardView.swift */; };
+		WSKB /* WeatherCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = WSKREF /* WeatherCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +45,9 @@
 		F17 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		MAIN001REF /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		PREVIEW001REF /* preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview.png; sourceTree = "<group>"; };
+		WSCREF /* WeatherCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
+		WSSREF /* WeatherScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherScene.swift; sourceTree = "<group>"; };
+		WSKREF /* WeatherCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -144,6 +153,9 @@
 				CFG001REF /* WeatherPreferences.swift */,
 				CFG002REF /* ConfigurationView.swift */,
 				F10 /* WeatherSaverView.swift */,
+				WSCREF /* WeatherCondition.swift */,
+				WSSREF /* WeatherScene.swift */,
+				WSKREF /* WeatherCardView.swift */,
 				43FB148B307FEA7400682CF6 /* thumbnail.png */,
 				PREVIEW001REF /* preview.png */,
 			);
@@ -278,6 +290,9 @@
 				CFG001 /* WeatherPreferences.swift in Sources */,
 				CFG002 /* ConfigurationView.swift in Sources */,
 				B1 /* WeatherSaverView.swift in Sources */,
+				WSCA /* WeatherCondition.swift in Sources */,
+				WSSA /* WeatherScene.swift in Sources */,
+				WSKA /* WeatherCardView.swift in Sources */,
 			);
 		};
 		S36 /* Sources */ = {
@@ -288,6 +303,9 @@
 				B3 /* AppDelegate.swift in Sources */,
 				B4 /* PreviewWindowController.swift in Sources */,
 				B5 /* WeatherSaverView.swift in Sources */,
+				WSCB /* WeatherCondition.swift in Sources */,
+				WSSB /* WeatherScene.swift in Sources */,
+				WSKB /* WeatherCardView.swift in Sources */,
 				MAIN001 /* main.swift in Sources */,
 			);
 		};

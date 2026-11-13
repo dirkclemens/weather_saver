@@ -78,6 +78,13 @@ public final class WeatherPreferences: ObservableObject {
         }
     }
 
+    @Published public var glossyCard: Bool {
+        didSet {
+            defaults.set(glossyCard, forKey: Keys.glossyCard)
+            defaults.synchronize()
+        }
+    }
+
     @Published public var simulateWeather: Bool {
         didSet {
             defaults.set(simulateWeather, forKey: Keys.simulateWeather)
@@ -103,6 +110,7 @@ public final class WeatherPreferences: ObservableObject {
         static let cloudOpacity = "WeatherCloudOpacity"
         static let useMetricUnits = "WeatherUseMetricUnits"
         static let showLocationName = "WeatherShowLocationName"
+        static let glossyCard = "WeatherGlossyCard"
         static let simulateWeather = "WeatherSimulateWeather"
         static let simulatedCondition = "WeatherSimulatedCondition"
     }
@@ -147,6 +155,8 @@ public final class WeatherPreferences: ObservableObject {
 
         self.showLocationName = defaults.object(forKey: Keys.showLocationName) != nil
             ? defaults.bool(forKey: Keys.showLocationName) : true
+
+        self.glossyCard = defaults.bool(forKey: Keys.glossyCard)
 
         self.simulateWeather = defaults.object(forKey: Keys.simulateWeather) != nil
             ? defaults.bool(forKey: Keys.simulateWeather) : false
