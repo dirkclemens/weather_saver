@@ -168,15 +168,7 @@ public final class WeatherSaverView: ScreenSaverView {
 
     // MARK: State → views
 
-    private var effectiveDate: Date {
-        #if DEBUG
-        if let hourString = ProcessInfo.processInfo.environment["WEATHERSAVER_HOUR"], let hour = Double(hourString) {
-            let midnight = Calendar.current.startOfDay(for: Date())
-            return midnight.addingTimeInterval(hour * 3600)
-        }
-        #endif
-        return Date()
-    }
+    private var effectiveDate: Date { SceneClock.now }
 
     private func updateScene(animated: Bool) {
         let snap = snapshot ?? .placeholder
@@ -350,7 +342,7 @@ public final class WeatherSaverView: ScreenSaverView {
         case .thunderstorm: (base, humidity, wind) = (21, 86, 9)
         }
         let precip: Double = [.drizzle: 0.2, .rain: 2.4, .heavyRain: 7.5, .sleet: 1.2, .snow: 0.8, .heavySnow: 3, .thunderstorm: 9][condition] ?? 0
-        let now = Date()
+        let now = SceneClock.now
         let startHour = Calendar.current.dateInterval(of: .hour, for: now)?.start ?? now
         // Plausible chance of precipitation: high when it is wet, small otherwise.
         let baseChance: Double = precip > 0 ? 0.75 : (condition == .clear ? 0.02 : 0.12)
