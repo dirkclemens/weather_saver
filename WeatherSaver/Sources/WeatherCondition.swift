@@ -263,3 +263,19 @@ struct SeededRandom {
     let t = clamp01((x - e0) / (e1 - e0))
     return t * t * (3 - 2 * t)
 }
+
+// MARK: - Clock
+
+/// The current time for scene and card. Debug builds honour `WEATHERSAVER_HOUR`
+/// (a fixed local hour today), so sky, clock and simulated forecast stay consistent
+/// in previews and screenshots.
+enum SceneClock {
+    static var now: Date {
+        #if DEBUG
+        if let hourString = ProcessInfo.processInfo.environment["WEATHERSAVER_HOUR"], let hour = Double(hourString) {
+            return Calendar.current.startOfDay(for: Date()).addingTimeInterval(hour * 3600)
+        }
+        #endif
+        return Date()
+    }
+}

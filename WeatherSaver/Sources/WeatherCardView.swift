@@ -204,7 +204,7 @@ private final class CardCanvas: NSView {
         }
 
         // Header: location + date on the left, clock on the right
-        let now = Date()
+        let now = SceneClock.now
         if draw {
             if o.showLocation, !o.locationName.isEmpty {
                 text(o.locationName.uppercased(), x: pad, y: y, size: 13 * s, weight: .semibold, alpha: 0.82, kern: 2.4 * s, maxWidth: inner * 0.65)
