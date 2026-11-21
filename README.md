@@ -61,6 +61,19 @@ weather_saver/
 - Internet connection (for [BrightSky API](https://brightsky.dev/))
 - Location services permission (optional, for "Use Current Location")
 
+## Download
+
+A ready-to-run build is available on the [Releases](https://github.com/dirkclemens/weather_saver/releases/latest) page
+as `WeatherSaver.dmg` (ad-hoc signed, Apple Silicon only). Open the DMG and copy `WeatherSaver.saver` to
+`~/Library/Screen Savers/`. Since it isn't notarized by Apple, macOS blocks it at first. Remove the quarantine flag
+after copying:
+
+```bash
+xattr -dr com.apple.quarantine ~/Library/Screen\ Savers/WeatherSaver.saver
+```
+
+Then select WeatherSaver in System Settings > Screen Saver.
+
 ## Building
 
 1. Open `WeatherSaver.xcodeproj` in Xcode
@@ -121,6 +134,13 @@ WEATHERSAVER_SIMULATE=thunderstorm WEATHERSAVER_HOUR=22 \
 # Force the glossy card on (1) or off (0)
 WEATHERSAVER_GLOSSY=1 .DerivedData/Build/Products/Debug/Preview.app/Contents/MacOS/Preview
 ```
+
+## Cloud Shapes
+
+The sky uses two kinds of cloud, and they are deliberately shaped in opposite ways:
+
+- **Cumulus** (`SkyTextures.cumulus`): single "heap" clouds have a **flat, slightly darker base** and **billow upwards** into bright, rounded tops. Real cumulus form this way: rising air cools until its water vapour condenses at a fairly uniform height (the condensation level), which cuts the base off flat, while convection keeps pushing the top upwards. The texture is built in that orientation (row 0 is the top) and is shown upright by Core Animation, so it must not be flipped vertically.
+- **Cloud deck** (`SkyTextures.deck`): the overcast layer used for *Cloudy*, *Overcast*, rain, snow and thunderstorms is a stratus / nimbostratus sheet seen from below. It extends beyond the top of the screen, so its upper edge is cut straight by the screen border, and the visible part is its **underside**, with softer bulges hanging down. This can look like an upside-down cumulus at first glance, but it is intended: you are looking up at the base of a cloud layer, not at a single cloud from the side.
 
 ## Permissions
 
